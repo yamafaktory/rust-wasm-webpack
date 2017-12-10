@@ -1,6 +1,6 @@
 {
   "name": "rust-wasm-webpack",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "title": "rust-wasm-webpack",
   "description": "A cool WASM demo with Webpack!",
   "keywords": [
