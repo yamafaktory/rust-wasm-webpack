@@ -1,0 +1,13 @@
+[package]
+name = "rust-wasm-webpack"
+version = "0.0.0"
+authors = ["Davy Duperron <yamafaktory@gmail.com>"]
+publish = false
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+
+[features]
+default = []

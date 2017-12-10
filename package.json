@@ -1,0 +1,62 @@
+{
+  "name": "rust-wasm-webpack",
+  "version": "0.0.0",
+  "title": "wasm-demo",
+  "description": "A cool WASM demo with Webpack!",
+  "keywords": [
+    "wasm",
+    "webassembly",
+    "webpack"
+  ],
+  "homepage": "https://github.com/yamafaktory/wasm-demo",
+  "author": {
+    "name": "Davy Duperron",
+    "url": "https://github.com/yamafaktory"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yamafaktory/wasm-demo"
+  },
+  "engines": {
+    "npm": ">=5.0.0",
+    "node": ">=8.0.0"
+  },
+  "devDependencies": {
+    "husky": "0.14.3",
+    "lint-staged": "6.0.0",
+    "snazzy": "7.0.0",
+    "standard": "10.0.3",
+    "webpack": "v4.0.0-alpha.0",
+    "webpack-dev-server": "3.0.0-alpha3"
+  },
+  "scripts": {
+    "build": "yarn wasm:build && yarn wasm:clean && webpack",
+    "lint": "standard --verbose | snazzy",
+    "prettier": "prettier --no-semi --single-quote --trailing-comma es5 --write",
+    "preversion": "git pull && yarn && yarn lint --silent",
+    "postversion": "git push --tags origin HEAD",
+    "start": "webpack-dev-server --no-inline",
+    "wasm:setup": "rustup update nightly && rustup target add wasm32-unknown-unknown --toolchain nightly && cargo install --force --git https://github.com/alexcrichton/wasm-gc",
+    "wasm:build": "cargo build --release --target wasm32-unknown-unknown && cp ./target/wasm32-unknown-unknown/release/rust_wasm_webpack.wasm ./wasm/main.wasm",
+    "wasm:clean": "wasm-gc ./wasm/main.wasm ./wasm/clean.wasm"
+  },
+  "lint-staged": {
+    "*.{js}": [
+      "yarn prettier",
+      "yarn lint",
+      "git add"
+    ]
+  },
+  "prettier": {
+    "semi": false,
+    "singleQuote": true,
+    "trailingComma": "es5",
+    "useTabs": false
+  },
+  "standard": {
+    "ignore": [
+      "test"
+    ]
+  }
+}
