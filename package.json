@@ -1,6 +1,6 @@
 {
   "name": "rust-wasm-webpack",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "title": "wasm-demo",
   "description": "A cool WASM demo with Webpack!",
   "keywords": [
@@ -23,6 +23,13 @@
     "node": ">=8.0.0"
   },
   "devDependencies": {
+    "babel-eslint": "8.0.3",
+    "eslint": "4.13.0",
+    "eslint-config-prettier": "2.8.0",
+    "eslint-config-standard": "10.2.1",
+    "eslint-plugin-import": "2.8.0",
+    "eslint-plugin-node": "5.2.1",
+    "eslint-plugin-standard": "3.0.1",
     "husky": "0.14.3",
     "lint-staged": "6.0.0",
     "snazzy": "7.0.0",
@@ -32,9 +39,9 @@
   },
   "scripts": {
     "build": "yarn wasm:build && yarn wasm:clean && webpack",
-    "lint": "standard --verbose | snazzy",
+    "lint": "eslint --cache --ext .js .",
     "prettier": "prettier --no-semi --single-quote --trailing-comma es5 --write",
-    "preversion": "git pull && yarn && yarn lint --silent",
+    "preversion": "git pull && yarn && yarn lint --quiet",
     "postversion": "git push --tags origin HEAD",
     "start": "webpack-dev-server --no-inline",
     "wasm:setup": "rustup update nightly && rustup target add wasm32-unknown-unknown --toolchain nightly && cargo install --force --git https://github.com/alexcrichton/wasm-gc",
