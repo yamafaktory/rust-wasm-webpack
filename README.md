@@ -1,4 +1,4 @@
-# rust-wasm-webpack 🏎️ [![Build Status](https://travis-ci.org/yamafaktory/rust-wasm-webpack.svg?branch=master)](https://travis-ci.org/yamafaktory/rust-wasm-webpack) [![npm version](https://img.shields.io/npm/v/wasm-webpack.svg?style=flat)](https://www.npmjs.com/package/rust-wasm-webpack) [![Standard - JavaScript Style Guide](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
+# rust-wasm-webpack 🏎️ [![Build Status](https://travis-ci.org/yamafaktory/rust-wasm-webpack.svg?branch=master)](https://travis-ci.org/yamafaktory/rust-wasm-webpack) [![npm version](https://img.shields.io/npm/v/rust-wasm-webpack.svg?style=flat)](https://www.npmjs.com/package/rust-wasm-webpack) [![Standard - JavaScript Style Guide](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
 
 rust-wasm-webpack
 
