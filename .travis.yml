@@ -1,0 +1,9 @@
+language: rust
+rust:
+  - nightly
+node_js:
+  - 8
+script:
+  - yarn lint
+  - yarn wasm:setup && yarn build
+sudo: false
