@@ -34,4 +34,4 @@ yarn build
 yarn start
 ```
 
-Go to http://localhost:9000/webpack-dev-server/ and enjoy!
+Go to http://localhost:9000/ and enjoy!

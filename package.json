@@ -36,7 +36,7 @@
     "snazzy": "7.0.0",
     "standard": "10.0.3",
     "webpack": "v4.0.0-alpha.0",
-    "webpack-dev-server": "3.0.0-alpha3"
+    "webpack-dev-server": "3.0.0-alpha5"
   },
   "scripts": {
     "build": "yarn wasm:build && yarn wasm:clean && webpack",
@@ -44,7 +44,7 @@
     "prettier": "prettier --no-semi --single-quote --trailing-comma es5 --write",
     "preversion": "git pull && yarn && yarn lint --quiet",
     "postversion": "git push --tags origin HEAD",
-    "start": "webpack-dev-server --no-inline",
+    "start": "webpack-dev-server",
     "wasm:setup": "rustup update nightly && rustup target add wasm32-unknown-unknown --toolchain nightly && cargo install --force --git https://github.com/alexcrichton/wasm-gc",
     "wasm:build": "cargo build --release --target wasm32-unknown-unknown && cp ./target/wasm32-unknown-unknown/release/rust_wasm_webpack.wasm ./wasm/main.wasm",
     "wasm:clean": "wasm-gc ./wasm/main.wasm ./wasm/clean.wasm"
