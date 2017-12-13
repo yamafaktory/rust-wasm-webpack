@@ -5,5 +5,5 @@ node_js:
   - 8
 script:
   - yarn && yarn lint
-  - mkdir wasm && yarn wasm:setup && yarn build
+  - yarn setup && yarn build
 sudo: false

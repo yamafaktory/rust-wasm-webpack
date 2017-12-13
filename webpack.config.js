@@ -11,13 +11,16 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, './public/code'),
     filename: 'bundle.js',
-    webassemblyModuleFilename: '[modulehash].wasm',
   },
   module: {
     rules: [
       {
-        test: /\.wasm$/,
+        test: /\.rs$/,
         type: 'webassembly/experimental',
+        use: {
+          loader: 'rust-native-wasm-loader',
+          options: { gc: true, release: true },
+        },
       },
     ],
   },
