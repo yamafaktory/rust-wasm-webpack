@@ -11,7 +11,6 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, './public/code'),
     filename: 'bundle.js',
-    webassemblyModuleFilename: '[modulehash].wasm',
   },
   module: {
     rules: [
