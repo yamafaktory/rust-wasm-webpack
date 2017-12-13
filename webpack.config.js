@@ -16,8 +16,12 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.wasm$/,
+        test: /\.rs$/,
         type: 'webassembly/experimental',
+        use: {
+          loader: 'rust-native-wasm-loader',
+          options: { gc: true, release: true },
+        },
       },
     ],
   },
