@@ -24,7 +24,7 @@ yarn setup
 
 ### Build
 
-*You can skip this step and directluy launch the dev server.*
+*You can skip this step and directly launch the dev server.*
 
 ```sh
 yarn build
