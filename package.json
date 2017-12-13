@@ -46,7 +46,7 @@
     "preversion": "git pull && yarn && yarn lint --quiet",
     "postversion": "git push --tags origin HEAD",
     "start": "webpack-dev-server",
-    "setup": "rustup update nightly && rustup target add wasm32-unknown-unknown --toolchain nightly"
+    "setup": "rustup update nightly && rustup target add wasm32-unknown-unknown --toolchain nightly && cargo install --force --git https://github.com/alexcrichton/wasm-gc"
   },
   "lint-staged": {
     "*.{js}": [
