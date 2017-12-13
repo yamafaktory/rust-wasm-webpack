@@ -18,7 +18,13 @@ Please refer to its [documentation](https://github.com/rust-lang-nursery/rustup.
 
 ### Setup
 
-This step will update to the latest Rust nightly, add the `wasm32-unknown-unknown` toolchain and install [wasm-gc](https://github.com/alexcrichton/wasm-gc) from *git*. The latter is a small command to clean a wasm module and remove all unneeded exports, imports, functions, etc.
+First, install the necessary NodeJS dependencies:
+
+```sh
+yarn
+```
+
+The next step will update to the latest Rust nightly, add the `wasm32-unknown-unknown` toolchain and install [wasm-gc](https://github.com/alexcrichton/wasm-gc) from *git*. The latter is a small command to clean a wasm module and remove all unneeded exports, imports, functions, etc.
 
 ```sh
 yarn setup
@@ -39,3 +45,7 @@ yarn start
 ```
 
 Go to http://localhost:9000/ and enjoy!
+
+## License
+
+Released under the [MIT license](https://opensource.org/licenses/MIT) by Davy Duperron.
