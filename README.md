@@ -18,7 +18,7 @@ Please refer to its [documentation](https://github.com/rust-lang-nursery/rustup.
 
 ### Setup
 
-This step will update to the latest Rust nightly and add the `wasm32-unknown-unknown` toolchain.
+This step will update to the latest Rust nightly, add the `wasm32-unknown-unknown` toolchain and install [wasm-gc](https://github.com/alexcrichton/wasm-gc) from *git*. The latter is a small command to clean a wasm module and remove all unneeded exports, imports, functions, etc.
 
 ```sh
 yarn setup
