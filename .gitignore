@@ -1,7 +1,8 @@
-/dist
-/public/code
-/node_modules
 .eslintcache
 .yarncache
+/dist
+/node_modules
+/public/code
+/target
 npm-debug.log
 yarn-error.log
