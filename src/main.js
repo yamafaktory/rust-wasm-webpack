@@ -1,3 +1,3 @@
 import('../src/lib.rs').then(wasm => {
-  console.log(wasm.default.add_one(22))
+  console.log(wasm.add_one(22))
 })
