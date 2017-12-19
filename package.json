@@ -36,8 +36,9 @@
     "rust-native-wasm-loader": "0.1.4",
     "snazzy": "7.0.0",
     "standard": "10.0.3",
-    "webpack": "v4.0.0-alpha.0",
-    "webpack-dev-server": "3.0.0-alpha5"
+    "webpack": "v4.0.0-alpha.1",
+    "webpack-cli": "1.5.2",
+    "webpack-dev-server": "3.0.0-alpha6"
   },
   "scripts": {
     "build": "webpack",
