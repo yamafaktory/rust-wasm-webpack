@@ -46,7 +46,7 @@
     "prettier": "prettier --no-semi --single-quote --trailing-comma es5 --write",
     "preversion": "git pull && yarn && yarn lint --quiet",
     "postversion": "git push --tags origin HEAD",
-    "start": "webpack-dev-server",
+    "start": "webpack-dev-server --open-page='/index.html'",
     "setup": "rustup update nightly && rustup target add wasm32-unknown-unknown --toolchain nightly && cargo install --force --git https://github.com/alexcrichton/wasm-gc"
   },
   "lint-staged": {
