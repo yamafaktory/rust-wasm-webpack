@@ -46,6 +46,28 @@ yarn start
 
 Go to http://localhost:9000/ and enjoy!
 
+## Troubleshooting
+
+### Build failure
+
+```
+ERROR in ./src/lib.rs
+Module build failed: Error: Command failed: cargo build --message-format=json --target=wasm32-unknown-unknown --release
+error: failed to run `rustc` to learn about target-specific information
+
+Caused by:
+  process didn't exit successfully: `rustc - --crate-name ___ --print=file-names --target wasm32-unknown-unknown --crate-type bin --crate-type cdylib --crate-type rlib` (exit code: 101)
+--- stderr
+error: Could not create LLVM TargetMachine for triple: wasm32-unknown-unknown: No available targets are compatible with this triple.
+    at ChildProcess.exithandler (child_process.js:270:12)
+    at emitTwo (events.js:125:13)
+    at ChildProcess.emit (events.js:213:7)
+    at maybeClose (internal/child_process.js:921:16)
+    at Process.ChildProcess._handle.onexit (internal/child_process.js:211:5)
+ @ ./src/main.js 1:0-23
+```
+The above error is caused by the fact that a stable version of rust has already been installed. In order to fix the issue, considering that you have already run `yarn setup` or `npm setup`, switch to the nightly version `rustup default nightly`
+
 ## License
 
 Released under the [MIT license](https://opensource.org/licenses/MIT) by Davy Duperron.
