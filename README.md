@@ -66,7 +66,9 @@ error: Could not create LLVM TargetMachine for triple: wasm32-unknown-unknown: N
     at Process.ChildProcess._handle.onexit (internal/child_process.js:211:5)
  @ ./src/main.js 1:0-23
 ```
-The above error is caused by the fact that a stable version of rust has already been installed. In order to fix the issue, considering that you have already run `yarn setup` or `npm setup`, switch to the nightly version `rustup default nightly`
+The above error is caused by the fact that a stable version of rust has already been installed. In order to fix the issue, considering that you have already run `yarn setup` or `npm setup`, switch to the nightly version:
+
+`rustup default nightly`.
 
 ## License
 
