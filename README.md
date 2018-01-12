@@ -68,7 +68,7 @@ error: Could not create LLVM TargetMachine for triple: wasm32-unknown-unknown: N
 ```
 The above error is caused by the fact that a stable version of rust has already been installed. In order to fix the issue, considering that you have already run `yarn setup` or `npm setup`, switch to the nightly version:
 
-`rustup default nightly`.
+`rustup default nightly`
 
 ## License
 
