@@ -4,6 +4,8 @@ module.exports = {
   devServer: {
     contentBase: path.join(__dirname, 'public'),
     compress: true,
+    open: true,
+    openPage: 'index.html',
     port: 9000,
   },
   entry: './src/main.js',
