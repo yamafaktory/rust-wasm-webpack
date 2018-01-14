@@ -24,8 +24,8 @@
     "node": ">=8.0.0"
   },
   "devDependencies": {
-    "babel-eslint": "8.0.3",
-    "eslint": "4.13.1",
+    "babel-eslint": "8.2.1",
+    "eslint": "4.15.0",
     "eslint-config-prettier": "2.9.0",
     "eslint-config-standard": "10.2.1",
     "eslint-plugin-import": "2.8.0",
@@ -33,11 +33,11 @@
     "eslint-plugin-standard": "3.0.1",
     "husky": "0.14.3",
     "lint-staged": "6.0.0",
-    "rust-native-wasm-loader": "0.1.5",
+    "rust-native-wasm-loader": "0.2.2",
     "snazzy": "7.0.0",
     "standard": "10.0.3",
-    "webpack": "v4.0.0-alpha.2",
-    "webpack-cli": "2.0.1",
+    "webpack": "v4.0.0-alpha.4",
+    "webpack-cli": "2.0.2",
     "webpack-dev-server": "3.0.0-alpha6"
   },
   "scripts": {
@@ -47,7 +47,7 @@
     "preversion": "git pull && yarn && yarn lint --quiet",
     "postversion": "git push --tags origin HEAD",
     "start": "webpack-dev-server",
-    "setup": "rustup update nightly && rustup target add wasm32-unknown-unknown --toolchain nightly && cargo install --force --git https://github.com/alexcrichton/wasm-gc"
+    "setup": "rustup default nightly && rustup update nightly && rustup target add wasm32-unknown-unknown --toolchain nightly && cargo install --force --git https://github.com/alexcrichton/wasm-gc"
   },
   "lint-staged": {
     "*.{js}": [
