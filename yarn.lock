@@ -5748,9 +5748,9 @@ run-queue@^1.0.0, run-queue@^1.0.3:
   dependencies:
     aproba "^1.1.1"
 
-rust-native-wasm-loader@0.7.0:
-  version "0.7.0"
-  resolved "https://registry.yarnpkg.com/rust-native-wasm-loader/-/rust-native-wasm-loader-0.7.0.tgz#59605249b30f4df2be46fac1a96bbdcf7bd53dd4"
+rust-native-wasm-loader@0.8.1:
+  version "0.8.1"
+  resolved "https://registry.yarnpkg.com/rust-native-wasm-loader/-/rust-native-wasm-loader-0.8.1.tgz#ba1fb10c740b5f364bf781f4283b3948efb2830f"
   dependencies:
     async-child-process "^1.1.1"
     fs-extra "^5.0.0"
