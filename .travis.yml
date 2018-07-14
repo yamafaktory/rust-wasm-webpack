@@ -2,7 +2,7 @@ language: rust
 rust:
   - nightly
 node_js:
-  - 8
+  - 9
 script:
   - yarn && yarn lint
   - yarn setup && yarn build
