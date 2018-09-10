@@ -24,7 +24,7 @@
     "node": ">=9.0.0"
   },
   "devDependencies": {
-    "babel-eslint": "8.2.6",
+    "babel-eslint": "9.0.0",
     "eslint": "5.5.0",
     "eslint-config-prettier": "2.10.0",
     "eslint-config-standard": "11.0.0",
